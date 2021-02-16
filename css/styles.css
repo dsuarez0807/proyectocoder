@@ -1,0 +1,263 @@
+* {
+  Margin: 0px;
+  padding: 0px; }
+
+body {
+  font-family: 'Poppins', sans-serif; }
+
+h1 {
+  color: #4164D1;
+  font-size: 50px; }
+
+h2 {
+  color: #4164D1;
+  font-size: 40px;
+  text-align: center; }
+
+h5 {
+  color: #4164D1;
+  font-size: 24px;
+  text-align: center; }
+
+section {
+  margin-top: 120px;
+  text-align: center; }
+
+footer {
+  background-color: #4164D1;
+  height: 200px;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 40px;
+  margin-top: 120px; }
+
+.container {
+  max-width: 1310px;
+  margin: auto; }
+
+.paragraph-s {
+  text-align: left;
+  color: #847D7D;
+  font-weight: 300; }
+
+/*index css */
+.bannerHero {
+  background-image: url(../img/banner-hero.jpg);
+  background-size: cover;
+  max-width: auto;
+  height: 440px;
+  text-align: left;
+  padding: 30px 40px 60px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.BannerText {
+  color: #ffffff !important; }
+
+.btnHero {
+  background-color: #4aabe4;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 24px 2px;
+  padding: 10px 24px;
+  cursor: pointer; }
+
+.btnHero:hover {
+  background-image: linear-gradient(to left, #4aabe4, #cf58df); }
+
+.overlay {
+  background-color: #ffffff;
+  opacity: 10%; }
+
+.navbar {
+  color: #4164D1;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center; }
+
+.icons-rss {
+  width: 20px; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px; }
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 5px 5px 35px rgba(0, 0, 0, 0.103);
+  border-radius: 30px;
+  padding: 20px;
+  margin: 20px;
+  font-size: 30px;
+  text-align: center;
+  transition: transform .2s; }
+
+.grid-item:hover {
+  transform: scale(1.2);
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */ }
+
+.row-flex {
+  display: flex;
+  justify-content: center;
+  text-align: left; }
+
+.clientes {
+  flex-basis: 20%;
+  align-self: center; }
+
+.columInformation {
+  flex-basis: 50%;
+  padding: 20px; }
+
+.columImage {
+  flex-basis: 50%;
+  padding: 20px;
+  align-self: flex-start; }
+
+.reviews {
+  background-color: #4aabe4;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+.textReviews {
+  padding-top: 40px;
+  color: #ffffff;
+  font-weight: 300; }
+
+/*products page css */
+.bannerHeroProducts {
+  background-image: url(../img/banner-aboutus.png);
+  background-size: cover;
+  max-width: auto;
+  height: 450px;
+  text-align: center;
+  padding: 30px; }
+
+/*variables*/
+/*CODIGO CLASE SASS*/
+.clientsSection {
+  margin-top: 120px !important;
+  text-align: center; }
+  .clientsSection__container {
+    max-width: 1310px;
+    margin: auto; }
+  .clientsSection__clientsImg {
+    flex-basis: 20%;
+    align-self: center; }
+
+/*facebook code sass*/
+.bannerFacebook {
+  background-image: url(../img/bannerFacebook.jpg);
+  background-size: cover;
+  max-width: auto;
+  height: 400px;
+  display: flex; }
+  .bannerFacebook__container {
+    max-width: 1310px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin: auto; }
+  .bannerFacebook__tittle {
+    color: #ffffff !important;
+    font-size: 50px; }
+
+.facebookInformation {
+  margin-top: 120px; }
+  .facebookInformation__container {
+    max-width: 1310px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  .facebookInformation__pharagraph {
+    flex-basis: 50%;
+    padding: 40px; }
+  .facebookInformation__ImgInformation {
+    flex-basis: 50%;
+    padding: 40px; }
+
+.contactSection {
+  margin-top: 120px; }
+  .contactSection__container {
+    max-width: 1310px;
+    margin: auto; }
+  .contactSection__title {
+    margin-bottom: 80px; }
+
+/*CODIGO CLASE SASS II*/
+.bannerHeroProducts {
+  background-image: url(../img/banner-aboutus.png);
+  background-size: cover;
+  max-width: auto;
+  height: 450px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.aboutSection {
+  margin-top: 80px; }
+  .aboutSection__container {
+    max-width: 1310px;
+    margin: auto;
+    text-align: center; }
+  .aboutSection__title {
+    margin-bottom: 50px; }
+  .aboutSection--textProducts {
+    text-align: center !important; }
+
+.informationProducts {
+  margin-top: margin-top 80px; }
+  .informationProducts__container {
+    max-width: 1310px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  .informationProducts__Products {
+    flex-basis: 30%; }
+  .informationProducts__title {
+    color: #4164D1;
+    text-align: center;
+    margin-top: 40px; }
+  .informationProducts--textCenter {
+    text-align: center !important; }
+
+.SocialMediabanner {
+  background-image: url(../img/bannersocial.jpg);
+  background-size: cover;
+  max-width: auto;
+  height: 550px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.socialMInformation {
+  margin-top: 120px; }
+  .socialMInformation__container {
+    max-width: 1310px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  .socialMInformation__pharagraph {
+    flex-basis: 50%;
+    padding: 40px; }
+  .socialMInformation__ImgInformation {
+    flex-basis: 50%;
+    padding: 40px; }

@@ -1,0 +1,154 @@
+@import 'main-styles.scss';
+
+/*variables*/
+$titulo-fuente: normal 30px 'OpenSans', sans-serif;
+$gris: #ccc;
+$container: 1310px;
+$margin-auto: margin 'auto';
+$marginProducts: margin-top 80px;
+$titles-color: #4164D1;
+
+
+/*CODIGO CLASE SASS*/
+
+.clientsSection{
+    margin-top: 120px !important;
+    text-align: center;
+    &__container {
+        max-width: $container;
+        margin: auto;
+    }
+    &__clientsImg {
+        flex-basis: 20%;
+        align-self: center;
+    }
+}
+/*facebook code sass*/
+.bannerFacebook{
+    background-image: url(../img/bannerFacebook.jpg);
+    background-size: cover;
+    max-width: auto;
+    height: 400px;
+    display: flex;
+    &__container {
+        max-width: $container;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        margin: auto;
+    }
+    &__tittle{
+        color: #ffffff !important;
+        font-size: 50px;
+    }
+}
+.facebookInformation{
+    margin-top: 120px;
+    &__container {
+        max-width: $container;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__pharagraph{
+        flex-basis: 50%;
+        padding: 40px;
+    }
+    &__ImgInformation{
+        flex-basis: 50%;
+        padding: 40px;
+    }
+}
+.contactSection{
+    margin-top: 120px;
+    &__container{
+        max-width: $container;
+        margin: auto;
+    }
+    &__title{
+        margin-bottom: 80px;
+    }
+}
+
+/*CODIGO CLASE SASS II*/
+
+.bannerHeroProducts {
+    background-image: url(../img/banner-aboutus.png);
+    background-size: cover;
+    max-width: auto;
+    height: 450px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.aboutSection{
+    margin-top: 80px;
+    &__container{
+        max-width: $container;
+        margin: auto;
+        text-align: center;
+    }
+    &__title{
+        margin-bottom: 50px;
+    }
+    &--textProducts{
+        text-align: center !important;
+    }
+}
+.informationProducts{
+    margin-top: $marginProducts;
+    &__container{
+        max-width: $container;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__Products{
+        flex-basis: 30%;
+    }
+    &__title{
+        color: $titles-color;
+        text-align: center;
+        margin-top: 40px;
+    }
+    &--textCenter{
+        text-align: center !important;
+    }
+}
+.SocialMediabanner{
+    background-image: url(../img/bannersocial.jpg);
+    background-size: cover;
+    max-width: auto;
+    height: 550px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.socialMInformation{
+    margin-top: 120px;
+    &__container {
+        max-width: $container;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__pharagraph{
+        flex-basis: 50%;
+        padding: 40px;
+    }
+    &__ImgInformation{
+        flex-basis: 50%;
+        padding: 40px;
+    }
+}
