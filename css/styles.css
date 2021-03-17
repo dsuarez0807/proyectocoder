@@ -46,7 +46,7 @@ a {
   background-color: #FECB46;
   font-family: "Anonymous Pro", monospace;
   color: #1F1F1F;
-  border-radius: 0; }
+  border-radius: none; }
 
 .form-control {
   background-color: #FECB46;
@@ -1108,7 +1108,7 @@ textarea {
       height: 100px; }
     .HeroAudience__img {
       flex-basis: 100%;
-      background-size: 70%;
+      background-size: 50%;
       background-position: center;
       background-repeat: no-repeat;
       height: 200px; }
@@ -1124,7 +1124,7 @@ textarea {
       height: 100px; }
     .HeroCampaign__img {
       flex-basis: 100%;
-      background-size: 70%;
+      background-size: 50%;
       background-position: center;
       background-repeat: no-repeat;
       height: 150px; }
@@ -1140,7 +1140,7 @@ textarea {
       height: 100px; }
     .HeroSearch__img {
       flex-basis: 100%;
-      background-size: 60%;
+      background-size: 45%;
       background-position: center;
       background-repeat: no-repeat;
       height: 150px; }
@@ -1173,11 +1173,11 @@ textarea {
       text-align: center; }
     .sectionPeople__imgs {
       flex-basis: 100%;
-      background-size: 65%;
+      background-size: 50%;
       height: 200px; }
     .sectionPeople__imgd {
       flex-basis: 100%;
-      background-size: 65%;
+      background-size: 50%;
       height: 200px; }
   .HeroContact {
     padding: 0;
