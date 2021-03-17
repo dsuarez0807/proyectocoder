@@ -1,136 +1,52 @@
- *{
-   Margin: 0px;
-   padding: 0px;
-   }
-  
-body{
-    font-family: 'Poppins', sans-serif;
+@mixin white-gradient {
+	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
 }
-h1{
-    color: #4164D1;
-    font-size: 50px;
-}
-h2{
-    color: #4164D1;
-    font-size: 40px;
-    text-align: center;
-}
-h5{
-  color: #4164D1;
-  font-size: 24px;
-  text-align: center;
-}
-section{
-    margin-top: 120px;
-    text-align: center;
-}
-footer{
-    background-color: #4164D1;
-    height: 200px;
-    text-align: center;
-    color: #ffffff;
-    padding-top: 40px;
-    margin-top: 120px;
-}
-.container{
-  max-width: 1310px;
-  margin: auto;
-}
-.paragraph-s{
-    text-align: left;
-    color: #847D7D;
-    font-weight: 300;
-  }
-/*index css */ 
-.bannerHero{
-    background-image: url(../img/banner-hero.jpg);
-    background-size: cover;
-    max-width: auto;
-    height: 440px;
-    text-align: left;
-    padding: 30px 40px 60px 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.BannerText{
-    color: #ffffff !important;
-}
-.btnHero{
-    background-color: #4aabe4; 
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 30px;
-    display: inline-block;
-    font-size: 16px;
-    margin: 24px 2px;
-    padding: 10px 24px;
-    cursor: pointer;
-}
-.btnHero:hover{
-  background-image: linear-gradient( to left, #4aabe4, #cf58df);
-}
-.overlay{
-    background-color: #ffffff;
-    opacity: 10%;
-}
-.navbar{
-    color: #4164D1;
-    font-size: 18px;
-    text-decoration: none;
-    text-align: center;
-}
-.icons-rss{
-    width: 20px;
-}
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 10px;
-}
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 5px 5px 35px rgba(0, 0, 0, 0.103);
-  border-radius: 30px; 
-  padding: 20px;
-  margin: 20px;
-  font-size: 30px;
-  text-align: center;
-  transition: transform .2s;
-}
-.grid-item:hover{
-  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}
-.row-flex{
-  display: flex;
-  justify-content: center;
-  text-align: left;
-}
-.clientes{
-  flex-basis: 20%;
-  align-self: center;
-}
-.columInformation{
-  flex-basis: 50%;
-  padding: 20px;
-  
-}
-.columImage {
-  flex-basis: 50%;
-  padding: 20px;
-  align-self: flex-start;
 
+$animationSpeed: 40s;
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
 }
-.reviews{
-  background-color: rgb(74, 171, 228);
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-.textReviews{
-  padding-top: 40px;
-  color: #ffffff;
-  font-weight: 300;
+
+.slider {
+	background: white;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 100px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 960px;
+	
+	&::before,
+	&::after {
+		@include white-gradient;
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 200px;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(250px * 14);
+	}
+	
+	.slide {
+		height: 100px;
+		width: 250px;
+	}
 }

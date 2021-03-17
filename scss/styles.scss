@@ -1,154 +1,1414 @@
-@import 'main-styles.scss';
-
 /*variables*/
-$titulo-fuente: normal 30px 'OpenSans', sans-serif;
 $gris: #ccc;
 $container: 1310px;
 $margin-auto: margin 'auto';
 $marginProducts: margin-top 80px;
-$titles-color: #4164D1;
+$titles-color: #FECB46;
+$bg-colors: #1F1F1F;
+$dark-white: #F4F4F4;
+$font-pharagraphs: 'Anonymous Pro', monospace;
+$font-titles: 'Montserrat', sans-serif; 
 
 
-/*CODIGO CLASE SASS*/
+/*GENERAL*/
+*{
+    Margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: $bg-colors;
+}
+.container-fluid{
+    padding: 0 30px 0 30px;
+}
+.bg-dark{
+    background-color: transparent !important;
+    font-family: 'Anonymous Pro', monospace;
+}
 
-.clientsSection{
-    margin-top: 120px !important;
+h1{
+     color: $titles-color;
+     font-size: 60px;
+     font-family: 'Montserrat', sans-serif; 
+}
+h2{
+    color: $titles-color;
+    font-size: 43px;
+    font-family: 'Montserrat', sans-serif; 
+}
+a{
+    text-decoration: none;
+}
+.pharagraph-m{
+    padding-top: 30px;
+    font-size: 20px;
+    line-height: 32px;
+    font-family: $font-pharagraphs;
+    color: $dark-white;
     text-align: center;
-    &__container {
-        max-width: $container;
-        margin: auto;
-    }
-    &__clientsImg {
+}
+.modal-header{
+    border-bottom: 2px solid $titles-color;
+    font-family: $font-titles;
+}
+.modal-footer{
+    border-top: 2px solid $titles-color;
+}
+.modal-content{
+    background-color: $titles-color;
+    font-family: $font-pharagraphs;
+    color: $bg-colors;
+    border-radius: 0;
+}
+.form-control{
+    background-color: $titles-color;
+    border: 2px solid $bg-colors;
+}
+.internalSections{
+    margin: 70px 0 70px 0;
+    text-align: center;
+}
+footer{
+     background-color: $bg-colors;
+     height: 150px;
+     text-align: center;
+     color: #ffffff;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     margin-top: 40px;
+}
+.sectionFooter{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__logo{
         flex-basis: 20%;
-        align-self: center;
+        text-align: left;
+        &.img{
+            max-width: 87px;
+            width: 100%;
+        }
+    }
+    &__copy{
+        flex-basis: 60%;
+        font-family: $font-pharagraphs;
+        color: $dark-white;
+        font-size: 16px;
+        text-align: center;
+    }
+    &__rss{
+        flex-basis: 20%;
+        text-align: right;
+        &__icon{
+            padding: 10px;
+        }
     }
 }
-/*facebook code sass*/
-.bannerFacebook{
-    background-image: url(../img/bannerFacebook.jpg);
-    background-size: cover;
-    max-width: auto;
-    height: 400px;
+/*HOME - BANNER-HERO*/
+.bannerHero{
+    margin-top: 50px;
     display: flex;
-    &__container {
-        max-width: $container;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
-        margin: auto;
+    flex-direction: column;
+    &__coltext{
+        flex-basis: 50%;
+        max-width: 655px;
+        flex-wrap: wrap;
     }
-    &__tittle{
-        color: #ffffff !important;
+    &__colImg{
+        flex-basis: 50%;
+        position: absolute;
+        top: -40%;
+        opacity: 0.5;
+        z-index: -20;
+    }
+    &__subtitle{
+        margin-top: 30px;
+        font-family: $font-pharagraphs;
+        font-size: 20px;
+        color: $dark-white;
+    }
+}
+.btn-hero{
+    background-color: $titles-color;
+    font-family: 'Anonymous Pro', monospace;
+    color: $bg-colors;
+    font-size: 20px;
+    margin-top: 30px;
+    padding: 12px 40px 12px 40px;
+    border: none;
+    &:hover{
+        background-color: $bg-colors;
+        color: $titles-color;
+        border: 2px solid $titles-color;
+    }
+}
+
+.btn-primary-bad{
+    background-color: $bg-colors;
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 20px;
+    color: $titles-color;
+    border: $titles-color 1px solid;
+    margin-top: 50px;
+    padding: 12px 40px 12px 40px;
+    &:hover{
+        background-color: $titles-color;
+        font-family: 'Anonymous Pro', monospace;
+        color: $bg-colors;
+        font-size: 20px;
+        padding: 12px 40px 12px 40px;
+        border: 2px solid $bg-colors;
+    }
+
+}
+/*HOME - WHAT WE DO*/
+.sericerTitle-whatwedo{
+    margin-top: 70px;
+    background-image: url(../img/WHAT-WE-DO.svg);
+    background-size: 100%;
+    max-width: 1110px;
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 183px;
+}
+.sectionAudience{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__coltex{
+        flex-basis: 50%;
+        max-width: 655px;
+        font-family: $font-pharagraphs;
+        color: $dark-white;
+        font-size: 16px;
+        text-align: center;
+    }
+    &__colImg{
+        flex-basis: 50%;
+        position: relative;
+        left: 5%;
+        &.hidden{
+            overflow: hidden;
+        }
+        .img{
+            width: 100%;
+            max-width: 600px;
+            transform:scale(1);
+            -ms-transform:scale(1); // IE 9 
+            -moz-transform:scale(1); // Firefox 
+            -webkit-transform:scale(1); // Safari and Chrome 
+            -o-transform:scale(1); // Opera 
+            -webkit-transition: all 500ms ease-in-out; // IE 9
+            -moz-transition: all 500ms ease-in-out; // Firefox
+            -ms-transition: all 500ms ease-in-out; // Safari and Chrome 
+            -o-transition: all 500ms ease-in-out; // Opera       
+        }
+        &:hover{
+            .img{
+                transform:scale(1.2);
+                -ms-transform:scale(1.2); // IE 9 
+                -moz-transform:scale(1.2); // Firefox 
+                -webkit-transform:scale(1.2); // Safari and Chrome 
+                -o-transform:scale(1.2); // Opera
+            }
+        
+        } 
+    }
+}
+.sectionCampaign{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__colImg{
+        flex-basis: 50%;
+        position: relative;
+        left: -5%;
+        &.hidden{
+            overflow: hidden;
+        }
+        .img{
+            max-width: 600px;
+            width: 100%;
+            transform:scale(1);
+            -ms-transform:scale(1); // IE 9 
+            -moz-transform:scale(1); // Firefox 
+            -webkit-transform:scale(1); // Safari and Chrome 
+            -o-transform:scale(1); // Opera 
+            -webkit-transition: all 500ms ease-in-out; // IE 9
+            -moz-transition: all 500ms ease-in-out; // Firefox
+            -ms-transition: all 500ms ease-in-out; // Safari and Chrome 
+            -o-transition: all 500ms ease-in-out; // Opera       
+        }
+        &:hover{
+            .img{
+                transform:scale(1.2);
+                -ms-transform:scale(1.2); // IE 9 
+                -moz-transform:scale(1.2); // Firefox 
+                -webkit-transform:scale(1.2); // Safari and Chrome 
+                -o-transform:scale(1.2); // Opera
+            }
+        
+        } 
+    }
+    &__coltex{
+        flex-basis: 50%;
+        max-width: 655px;
+        font-family: $font-pharagraphs;
+        color: $dark-white;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+.sectionSearch{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__coltex{
+        flex-basis: 50%;
+        max-width: 655px;
+        font-family: $font-pharagraphs;
+        color: $dark-white;
+        font-size: 16px;
+        text-align: center;
+    }
+    &__colImg{
+        flex-basis: 50%;
+        position: relative;
+        left: 5%;
+        &.hidden{
+            overflow: hidden;
+        }
+        .img{
+            max-width: 600px;
+            width: 100%;
+            transform:scale(1);
+            -ms-transform:scale(1); // IE 9 
+            -moz-transform:scale(1); // Firefox 
+            -webkit-transform:scale(1); // Safari and Chrome 
+            -o-transform:scale(1); // Opera 
+            -webkit-transition: all 500ms ease-in-out; // IE 9
+            -moz-transition: all 500ms ease-in-out; // Firefox
+            -ms-transition: all 500ms ease-in-out; // Safari and Chrome 
+            -o-transition: all 500ms ease-in-out; // Opera       
+        }
+        &:hover{
+            .img{
+                transform:scale(1.2);
+                -ms-transform:scale(1.2); // IE 9 
+                -moz-transform:scale(1.2); // Firefox 
+                -webkit-transform:scale(1.2); // Safari and Chrome 
+                -o-transform:scale(1.2); // Opera
+            }
+        
+        } 
+    }
+}
+/*HOME CLIENTS*/
+.clientsTitle{
+    margin-top: 70px;
+    height: 183px;
+    background-image: url(../img/OUR-CLIENTS.svg);
+    background-size: 80%;
+    background-position: right;
+    background-repeat: no-repeat;
+    
+}
+.sectionClients{
+    margin-top: 70px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &__brands{
+        flex-basis: 20%;
+        padding: 40px;
+        &.img{
+            width: 100%;
+        }
+    }
+}
+/*HOME CONTACT US*/
+.contactBG{
+    background-color: $titles-color;
+}
+.contactTitle{
+    padding-top: 70px;
+    background-image: url(../img/CONTACT-US.svg);
+    background-size: 80%;
+    background-position: center;
+    height: 183px;
+    background-repeat: no-repeat;
+}
+.sectionContactus{
+    margin-top: 30px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__coltext{
+       flex-basis: 50%;
+       font-family: $font-pharagraphs;
+       color: $bg-colors;
+       font-size: 18px; 
+    }
+    &__title{
+        font-family: $font-titles;
+        color: $bg-colors;
+        font-size: 43px;
+    }
+    &__colform{
+        flex-basis: 50%;
+    }
+}
+.contactform{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+input[type=text], input[type=email], textarea{
+    margin-top: 20px;
+    padding: 15px;
+    border: $bg-colors 2px solid;
+    background-color: transparent;
+    font-family: $font-pharagraphs;
+    color: $bg-colors;
+}
+textarea{
+    height: 200px;
+}
+::-webkit-input-placeholder { color: $bg-colors; } 
+:-moz-placeholder { /* Firefox 18- */ color: $bg-colors; } 
+::-moz-placeholder { /* Firefox 19+ */ color: $bg-colors; } 
+:-ms-input-placeholder { color: $bg-colors; }
+
+/*ABOUT US PAGE*/
+.HeroAboutUs{
+    padding: 40px 0 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__title{
+        flex-basis: 50%;
+        text-align: left;
+        background-image: url(../img/ABOUT-US.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 115px;
+    }
+    &__img{
+        flex-basis: 40%;
+        background-image: url(../img/about-us-icon.png);
+        height: 514px;
+        position: relative;
+        right: 0;
+    }
+}
+.sectionPeople{
+    margin: 70px 0 70px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__text{
+        flex-basis: 50%;
+        font-size: 16px;
+        line-height: 28px;
+        font-family: $font-pharagraphs;
+        color: $dark-white;
+        text-align: left;
+    }
+    &__imgs{
+        flex-basis: 50%;
+        background-image: url(../img/sam-photo.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 80%;
+        height: 600px;
+    }
+    &__imgd{
+        flex-basis: 50%;
+        background-image: url(../img/dario-photo.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 600px;
+    }
+}
+.shape{
+    margin: 20px 0 20px 0;
+}
+/*AUDIENCE PAGE*/
+.HeroAudience{
+    padding: 40px 0 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__title{
+        flex-basis: 60%;
+        background-image: url(../img/AUDIENCE.svg);
+        background-position: left;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 183px;
+    }
+    &__img{
+        flex-basis: 40%;
+        background-image: url(../img/audience.png);
+        background-position: right;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 514px;
+        right: 0%;
+    }
+}
+/*CAMPAIGN PAGE*/
+.HeroCampaign{
+    padding: 40px 0 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__title{
+        flex-basis: 60%;
+        background-image: url(../img/CAMPAIGNS.svg);
+        background-position: left;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 183px;
+    }
+    &__img{
+        flex-basis: 40%;
+        background-image: url(../img/campaings.png);
+        background-position: right;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 514px;
+        right: 0%;
+    }
+}
+/*SEARCH PAGE*/
+.HeroSearch{
+    padding: 40px 0 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__title{
+        flex-basis: 60%;
+        background-image: url(../img/search.svg);
+        background-position: left;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 183px;
+    }
+    &__img{
+        flex-basis: 40%;
+        background-image: url(../img/search.png);
+        height: 514px;
+        position: relative;
+        right: 0%;
+    }
+}
+/*CONTACT PAGE*/
+.HeroContact{
+    padding: 40px 0 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__title{
+        flex-basis: 60%;
+        background-image: url(../img/CONTACTUS.svg);
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 100%;
+        height: 183px;
+    }
+    &__img{
+        flex-basis: 40%;
+        background-image: url(../img/contact-icon.png);
+        height: 514px;
+        position: relative;
+        right: 0%;
+    }
+}
+
+/*RESPONSIVE DESIGN*/
+
+@media all and (min-width: 768px) and (max-width: 1280px) {
+    h2{
+        color: $titles-color;
+        font-size: 35px;
+        font-family: 'Montserrat', sans-serif; 
+    }
+    .bannerHero__colImg{
+        display: none;
+    }
+    .bannerHero{
+        align-items: center;
+    }
+    .bannerHero__coltext{
+        text-align: center;
+    }
+    .sericerTitle-whatwedo{
+        background-image: url(../img/WHAT-WE-DO.svg);
+        background-size: 70%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 150px;
+    }
+    .clientsTitle{
+        height: 155px;
+        background-image: url(../img/OUR-CLIENTS.svg);
+        background-size: 70%;
+        background-position: center;
+        background-repeat: no-repeat;    
+    }
+    /*HOME CLIENTS*/
+    .sectionClients{
+        margin-top: 40px;
+        padding-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        &__brands{
+            flex-basis: 50%;
+            flex-wrap: wrap;
+            padding: 20px;
+            text-align: center;
+            &.img{
+                width: 100%;
+            }
+        }
+    }
+    /* HOME CONTACT US */
+    .sectionContactus{
+        margin-top: 30px;
+        padding: 50px 0 50px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .contactform{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .sectionFooter{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        &__logo{
+            flex-basis: 10%;
+            text-align: center;
+            &.img{
+                max-width: 80px;
+                width: 60%;
+            }
+        }
+        &__copy{
+            flex-basis: 55%;
+            font-family: $font-pharagraphs;
+            color: $dark-white;
+            font-size: 14px;
+            text-align: center;
+        }
+        &__rss{
+            flex-basis: 15%;
+            text-align: center;
+            &__icon{
+                padding: 8px;
+            }
+        }
+    }
+    /*ABOUT PAGE*/
+    .HeroAboutUs{
+        padding: 40px 0 40px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__title{
+            flex-basis: 50%;
+            text-align: left;
+            background-image: url(../img/AUDIENCE.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 115px;
+        }
+        &__img{
+            flex-basis: 40%;
+            background-image: url(../img/about-us-icon.png);
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 250px;
+
+        }
+    }
+    .sectionPeople{
+        margin: 50px 0 50px 0;
+        display: flex;
+        align-items: center;
+        &__text{
+            flex-basis: 50%;
+            font-size: 14px;
+            line-height: 28px;
+            font-family: $font-pharagraphs;
+            color: $dark-white;
+            text-align: left;
+        }
+        &__imgs{
+            flex-basis: 50%;
+            background-size: 65%;
+            height: 508px;
+        }
+        &__imgd{
+            flex-basis: 50%;
+            background-size: 65%;
+            height: 508px;
+        }
+    }
+    /*AUDIENCE PAGE */
+    .HeroAudience{
+        padding: 30px 0 30px 0;
+        &__title{
+            flex-basis: 60%;
+            background-size: 80%;
+            height: 120px;
+        }
+        &__img{
+            flex-basis: 40%;
+            background-size: 80%;
+            background-position: center;
+            height: 254px;
+        }
+    }
+    /*CAMPAIGNS PAGE */
+    .HeroCampaign{
+        padding: 30px 0 30px 0;
+        &__title{
+            flex-basis: 60%;
+            background-size: 100%;
+            height: 120px;
+        }
+        &__img{
+            flex-basis: 40%;
+            background-size: 80%;
+            background-position: center;
+            height: 254px;
+        }
+    }
+    /*SEARCH PAGE */
+    .HeroSearch{
+        padding: 30px 0 30px 0;
+        &__title{
+            flex-basis: 60%;
+            background-size: 100%;
+            height: 120px;
+        }
+        &__img{
+            flex-basis: 40%;
+            background-size: 80%;
+            background-position: right;
+            background-repeat: no-repeat;
+            height: 300px;
+        }
+    }
+    .HeroContact{
+        padding: 30px 0 30px 0;
+        &__title{
+            flex-basis: 60%;
+            background-size: 100%;
+            height: 120px;
+        }
+        &__img{
+            flex-basis: 40%;
+            background-size: 80%;
+            background-position: right;
+            background-repeat: no-repeat;
+            height: 300px;
+        }
+    }
+}
+@media all and (min-width: 480px) and (max-width: 767px){
+    .container-fluid{
+        padding: 0 28px 0 28px !important;
+    }
+    h1{
         font-size: 50px;
     }
-}
-.facebookInformation{
-    margin-top: 120px;
-    &__container {
-        max-width: $container;
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+    h2{
+        font-size: 35px;
+    }
+    .bannerHero__colImg{
+        display: none;
+    }
+    .bannerHero{
         align-items: center;
     }
-    &__pharagraph{
-        flex-basis: 50%;
-        padding: 40px;
-    }
-    &__ImgInformation{
-        flex-basis: 50%;
-        padding: 40px;
-    }
-}
-.contactSection{
-    margin-top: 120px;
-    &__container{
-        max-width: $container;
-        margin: auto;
-    }
-    &__title{
-        margin-bottom: 80px;
-    }
-}
-
-/*CODIGO CLASE SASS II*/
-
-.bannerHeroProducts {
-    background-image: url(../img/banner-aboutus.png);
-    background-size: cover;
-    max-width: auto;
-    height: 450px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.aboutSection{
-    margin-top: 80px;
-    &__container{
-        max-width: $container;
-        margin: auto;
+    .bannerHero__coltext{
         text-align: center;
     }
-    &__title{
-        margin-bottom: 50px;
+    .btn-primary-bad{
+        width: 100%;
     }
-    &--textProducts{
-        text-align: center !important;
+    .btn-hero{
+        width: 90%;
     }
-}
-.informationProducts{
-    margin-top: $marginProducts;
-    &__container{
-        max-width: $container;
-        margin: auto;
+    .pharagraph-m{
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .sericerTitle-whatwedo{
+        background-image: url(../img/WHAT-WE-DO.svg);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 150px;
+    }
+    .sectionAudience{
+        margin-top: 50px;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        &__coltex{
+            margin-top: 50px;
+            flex-basis: 50%;
+            max-width: 655px;
+            font-family: $font-pharagraphs;
+            color: $dark-white;
+            font-size: 16px;
+            text-align: center;
+        }
+        &__colImg{
+            flex-basis: 100%;
+            text-align: center;
+            .img{
+                width: 70%;
+                max-width: 600px;      
+            }
+        }
     }
-    &__Products{
-        flex-basis: 30%;
+    .sectionCampaign{
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        &__coltex{
+            margin-top: 50px;
+            flex-basis: 60%;
+            max-width: 655px;
+            font-family: $font-pharagraphs;
+            color: $dark-white;
+            font-size: 16px;
+            text-align: center;
+        }
+        &__colImg{
+            margin-top: 50px;
+            flex-basis: 100%;
+            text-align: center;
+            .img{
+                width: 70%;
+                max-width: 600px;     
+            }
+        }
     }
-    &__title{
-        color: $titles-color;
-        text-align: center;
+    .sectionSearch{
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        &__coltex{
+            margin-top: 50px;
+            flex-basis: 100%;
+            max-width: 655px;
+            font-family: $font-pharagraphs;
+            color: $dark-white;
+            font-size: 16px;
+            text-align: center;
+        }
+        &__colImg{
+            flex-basis: 100%;
+            text-align: center;
+            .img{
+                width: 70%;
+                max-width: 600px;      
+            }
+        }
+    }
+    .clientsTitle{
+        height: 130px;
+        background-image: url(../img/OUR-CLIENTS.svg);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;    
+    }
+    .sectionClients{
         margin-top: 40px;
-    }
-    &--textCenter{
-        text-align: center !important;
-    }
-}
-.SocialMediabanner{
-    background-image: url(../img/bannersocial.jpg);
-    background-size: cover;
-    max-width: auto;
-    height: 550px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-}
-.socialMInformation{
-    margin-top: 120px;
-    &__container {
-        max-width: $container;
-        margin: auto;
+        padding-bottom: 50px;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        &__brands{
+            flex-basis: 50%;
+            flex-wrap: wrap;
+            padding: 20px;
+            text-align: center;
+            &.img{
+                width: 20%;
+                padding: 15px;
+            }
+        }
+    }
+    .contactTitle{
+        padding-top: 70px;
+        background-image: url(../img/CONTACT-US.svg);
+        background-size: 100%;
+        background-position: center;
+        height: 183px;
+        background-repeat: no-repeat;
+    }
+    .sectionContactus{
+        margin-top: 10px;
+        padding-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &__coltext{
+           flex-basis: 100%;
+           font-family: $font-pharagraphs;
+           color: $bg-colors;
+           font-size: 18px;
+           text-align: center;
+        }
+        &__title{
+            font-family: $font-titles;
+            color: $bg-colors;
+            font-size: 35px;
+        }
+        &__colform{
+            flex-basis: 100%;
+            width: 400px;
+        }
+    }
+    .contactform{
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+        width: 100%;
+    }
+    footer{
+        background-color: $bg-colors;
+        height: auto;
+        text-align: center;
+        color: #ffffff;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 20px;
+   }
+    .sectionFooter{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        &__logo{
+            flex-basis: 100%;
+            text-align: left;
+            margin-top: 20px;
+            &.img{
+                max-width: 87px;
+                width: 100%;
+            }
+        }
+        &__copy{
+            flex-basis: 100%;
+            font-family: $font-pharagraphs;
+            color: $dark-white;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        &__rss{
+            flex-basis: 100%;
+            text-align: right;
+            margin-top: 20px;
+            &__icon{
+                padding: 10px;
+            }
+        }
+    }
+    /*AUDIENCE PAGE */
+    .HeroAudience{
+        padding: 20px 0 20px 0;
+        display: flex;
+        flex-flow: wrap-reverse;
+        &__title{
+            flex-basis: 100%;
+            background-size: 90%;
+            background-position: center;
+            height: 120px;
+        }
+        &__img{
+            flex-basis: 100%;
+            background-size: 70%;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 254px;
+        }
+    }
+    /*CAMPAIGNS PAGE */
+    .HeroCampaign{
+        padding: 20px 0 20px 0;
+        display: flex;
+        flex-flow: wrap-reverse;
+        &__title{
+            flex-basis: 100%;
+            background-size: 90%;
+            background-position: center;
+            height: 120px;
+        }
+        &__img{
+            flex-basis: 100%;
+            background-size: 70%;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 254px;
+        }
+    }
+    /*SEARCH PAGE */
+    .HeroSearch{
+        padding: 20px 0 20px 0;
+        display: flex;
+        flex-flow: wrap-reverse;
+        &__title{
+            flex-basis: 100%;
+            background-size: 90%;
+            background-position: center;
+            height: 120px;
+        }
+        &__img{
+            flex-basis: 100%;
+            background-size: 60%;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 250px;
+        }
+    }
+    .HeroAboutUs{
+        padding: 20px 0 20px 0;
+        display: flex;
+        flex-flow: wrap-reverse;
+        &__title{
+            flex-basis: 100%;
+            background-size: 90%;
+            background-position: center;
+            height: 120px;
+        }
+        &__img{
+            flex-basis: 100%;
+            background-size: 60%;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 250px;
+
+        }
+    }
+    .sectionPeople{
+        margin: 30px 0 30px 0;
+        display: flex;
+        align-items: center;
+        flex-flow: wrap;
+        &__text{
+            flex-basis: 100%;
+            font-size: 14px;
+            line-height: 28px;
+            font-family: $font-pharagraphs;
+            color: $dark-white;
+            text-align: center;
+        }
+        &__imgs{
+            flex-basis: 100%;
+            background-size: 65%;
+            height: 300px;
+        }
+        &__imgd{
+            flex-basis: 100%;
+            background-size: 65%;
+            height: 300px;
+        }
+    }
+    .HeroContact{
+        padding: 20px 0 20px 0;
+        display: flex;
+        flex-flow: wrap-reverse;
+        &__title{
+            flex-basis: 100%;
+            background-size: 90%;
+            background-position: center;
+            height: 120px;
+        }
+        &__img{
+            flex-basis: 100%;
+            background-size: 60%;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 250px;
+        }
+    }
+}
+@media all and (max-width: 479px) {
+    .container-fluid{
+        padding: 0 28px 0 28px !important;
+    }
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    .bannerHero__colImg{
+        display: none;
+    }
+    .bannerHero{
         align-items: center;
     }
-    &__pharagraph{
-        flex-basis: 50%;
-        padding: 40px;
+    .bannerHero__coltext{
+        text-align: center;
     }
-    &__ImgInformation{
-        flex-basis: 50%;
-        padding: 40px;
+    .pharagraph-m{
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .internalSections{
+        margin: 0 20px 0 20px;
+    }
+    .btn-hero{
+        font-size: 16px;
+        width: 90%;
+        margin: 30px 0 30px 0;
+        padding: 12px 20px 10px 20px;
+        border: none;
+        &:hover{
+            background-color: $bg-colors;
+            color: $titles-color;
+            border: 2px solid $titles-color;
+        }
+    }
+    .btn-primary-bad{
+        width: 100%;
+    }
+    .sericerTitle-whatwedo{
+        margin-top: 20px;
+        background-image: url(../img/WHAT-WE-DO.svg);
+        background-size: 90%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 90px;
+    }
+    .sectionAudience{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        &__coltex{
+            margin-top: 30px;
+            flex-basis: 50%;
+            max-width: 655px;
+            font-family: $font-pharagraphs;
+            color: $dark-white;
+            font-size: 16px;
+            text-align: center;
+        }
+        &__colImg{
+            flex-basis: 100%;
+            text-align: center;
+            .img{
+                width: 70%;
+                max-width: 600px;      
+            }
+        }
+    }
+    .sectionCampaign{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        &__coltex{
+            margin-top: 30px;
+            flex-basis: 60%;
+            max-width: 655px;
+            font-family: $font-pharagraphs;
+            color: $dark-white;
+            font-size: 16px;
+            text-align: center;
+        }
+        &__colImg{
+            margin-top: 30px;
+            flex-basis: 100%;
+            text-align: center;
+            .img{
+                width: 70%;
+                max-width: 600px;     
+            }
+        }
+    }
+    .sectionSearch{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        &__coltex{
+            margin-top: 30px;
+            flex-basis: 900%;
+            max-width: 655px;
+            font-family: $font-pharagraphs;
+            color: $dark-white;
+            font-size: 16px;
+            text-align: center;
+        }
+        &__colImg{
+            flex-basis: 100%;
+            text-align: center;
+            .img{
+                width: 70%;
+                max-width: 600px;      
+            }
+        }
+    }
+    .clientsTitle{
+        padding-top: 50px;
+        height: 90px;
+        background-image: url(../img/OUR-CLIENTS.svg);
+        background-size: 90%;
+        background-position: center;
+        background-repeat: no-repeat;    
+    }
+    .sectionClients{
+        margin-top: 40px;
+        padding-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        &__brands{
+            flex-basis: 50%;
+            flex-wrap: wrap;
+            padding: 20px;
+            text-align: center;
+            &.img{
+                width: 60%;
+                padding: 15px;
+            }
+        }
+    }
+    .contactTitle{
+        padding-top: 40px;
+        background-image: url(../img/CONTACT-US.svg);
+        background-size: 100%;
+        background-position: center;
+        height: 120px;
+        background-repeat: no-repeat;
+    }
+    .sectionContactus{
+        margin-top: 10px;
+        padding-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &__coltext{
+           flex-basis: 100%;
+           font-family: $font-pharagraphs;
+           color: $bg-colors;
+           font-size: 18px;
+           text-align: center;
+        }
+        &__title{
+            font-family: $font-titles;
+            color: $bg-colors;
+            font-size: 35px;
+        }
+        &__colform{
+            flex-basis: 100%;
+            width: 270px;
+        }
+    }
+    .contactform{
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+        width: 100%;
+    }
+    footer{
+        background-color: $bg-colors;
+        height: auto;
+        text-align: center;
+        color: #ffffff;
+        padding-top: 0;
+        padding-bottom: 20px;
+        margin-top: 20px;
+   }
+    .sectionFooter{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        &__logo{
+            flex-basis: 100%;
+            text-align: left;
+            margin-top: 20px;
+            &.img{
+                max-width: 50px;
+                width: 50%;
+            }
+        }
+        &__copy{
+            flex-basis: 100%;
+            font-family: $font-pharagraphs;
+            color: $dark-white;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        &__rss{
+            flex-basis: 100%;
+            text-align: right;
+            margin-top: 20px;
+            &__icon{
+                padding: 10px;
+            }
+        }
+    }
+    /*AUDIENCE PAGE */
+    .HeroAudience{
+        padding: 0;
+        display: flex;
+        flex-flow: wrap-reverse;
+        &__title{
+            flex-basis: 100%;
+            background-size: 90%;
+            background-position: center;
+            height: 100px;
+        }
+        &__img{
+            flex-basis: 100%;
+            background-size: 70%;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 200px;
+        }
+    }
+    /*CAMPAIGNS PAGE */
+    .HeroCampaign{
+        padding: 0;
+        display: flex;
+        flex-flow: wrap-reverse;
+        &__title{
+            flex-basis: 100%;
+            background-size: 90%;
+            background-position: center;
+            height: 100px;
+        }
+        &__img{
+            flex-basis: 100%;
+            background-size: 70%;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 150px;
+        }
+    }
+    /*SEARCH PAGE */
+    .HeroSearch{
+        padding: 0;
+        display: flex;
+        flex-flow: wrap-reverse;
+        &__title{
+            flex-basis: 100%;
+            background-size: 90%;
+            background-position: center;
+            height: 100px;
+        }
+        &__img{
+            flex-basis: 100%;
+            background-size: 60%;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 150px;
+        }
+    }
+    .HeroAboutUs{
+        padding: 0;
+        display: flex;
+        flex-flow: wrap-reverse;
+        &__title{
+            flex-basis: 100%;
+            background-size: 90%;
+            background-position: center;
+            height: 100px;
+        }
+        &__img{
+            flex-basis: 100%;
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 150px;
+
+        }
+    }
+    .sectionPeople{
+        margin: 30px 0 30px 0;
+        display: flex;
+        align-items: center;
+        flex-flow: wrap;
+        &__text{
+            flex-basis: 100%;
+            font-size: 14px;
+            line-height: 28px;
+            font-family: $font-pharagraphs;
+            color: $dark-white;
+            text-align: center;
+        }
+        &__imgs{
+            flex-basis: 100%;
+            background-size: 65%;
+            height: 200px;
+        }
+        &__imgd{
+            flex-basis: 100%;
+            background-size: 65%;
+            height: 200px;
+        }
+    }
+    .HeroContact{
+        padding: 0;
+        display: flex;
+        flex-flow: wrap-reverse;
+        &__title{
+            flex-basis: 100%;
+            background-size: 90%;
+            background-position: center;
+            height: 100px;
+        }
+        &__img{
+            flex-basis: 100%;
+            background-size: 40%;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 150px;
+        }
     }
 }
